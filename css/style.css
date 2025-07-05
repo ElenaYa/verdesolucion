@@ -1571,3 +1571,400 @@ body {
         backdrop-filter: blur(10px);
     }
 }
+/* Legal Pages Styling */
+.legal-content {
+    padding: 4rem 0;
+    background-color: #fefae0;
+}
+
+.legal-document {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(40, 54, 24, 0.1);
+    border-left: 5px solid #a3b18a;
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f7f3d0;
+}
+
+.legal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.legal-section h2 {
+    color: #283618;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a3b18a;
+}
+
+.legal-section h3 {
+    color: #283618;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.legal-section h4 {
+    color: #606c38;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+}
+
+.legal-section p {
+    color: #606c38;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.legal-section ul,
+.legal-section ol {
+    color: #606c38;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.legal-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Company Info Box */
+.company-info {
+    background-color: #f7f3d0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #a3b18a;
+}
+
+.company-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Legal Subsections */
+.legal-subsection {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    border: 1px solid #f7f3d0;
+}
+
+.legal-subsection h3 {
+    color: #283618;
+    margin-top: 0;
+}
+
+/* Data Categories Grid */
+.data-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.data-category {
+    background-color: #f7f3d0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-top: 3px solid #a3b18a;
+}
+
+.data-category h4 {
+    color: #283618;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.data-category ul {
+    margin-left: 1rem;
+}
+
+/* Transfer Note */
+.transfer-note {
+    background-color: #a3b18a;
+    color: #fefae0;
+    padding: 1rem;
+    border-radius: 8px;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* ARCO Process */
+.arco-process {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #a3b18a;
+    margin: 1rem 0;
+}
+
+.arco-process h3 {
+    color: #283618;
+    margin-top: 0;
+}
+
+.arco-process ol {
+    margin-left: 1.5rem;
+}
+
+/* Revocation Note */
+.revocation-note {
+    background-color: #f7f3d0;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #283618;
+    margin: 1rem 0;
+}
+
+/* Security Measures */
+.security-measures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.security-item {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #a3b18a;
+}
+
+.security-item h4 {
+    color: #283618;
+    margin-bottom: 1rem;
+}
+
+/* Contact Privacy */
+.contact-privacy {
+    background-color: #a3b18a;
+    color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.contact-privacy p {
+    color: #fefae0;
+    margin-bottom: 0.5rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.service-item {
+    background-color: #f7f3d0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-top: 3px solid #a3b18a;
+}
+
+.service-item h4 {
+    color: #283618;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Process Steps */
+.process-steps {
+    margin: 1.5rem 0;
+}
+
+.step-item {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #a3b18a;
+}
+
+.step-item h4 {
+    color: #283618;
+    margin-bottom: 0.8rem;
+}
+
+/* Payment Info */
+.payment-info h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Delivery Terms */
+.delivery-terms h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Warranties */
+.warranties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.warranty-item {
+    background-color: #f7f3d0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-top: 4px solid #a3b18a;
+}
+
+.warranty-item h4 {
+    color: #283618;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.warranty-conditions {
+    background-color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #a3b18a;
+    margin-top: 2rem;
+}
+
+.warranty-conditions h3 {
+    color: #283618;
+    margin-top: 0;
+}
+
+/* Client Obligations */
+.client-obligations h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Liability Limits */
+.liability-limits h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Cancellation Policy */
+.cancellation-policy h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Website Terms */
+.website-terms h3 {
+    color: #283618;
+    border-bottom: 1px solid #a3b18a;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Jurisdiction */
+.jurisdiction {
+    background-color: #f7f3d0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #283618;
+    margin: 1rem 0;
+}
+
+.jurisdiction h3 {
+    color: #283618;
+    margin-top: 1rem;
+}
+
+/* Contact Legal */
+.contact-legal {
+    background-color: #a3b18a;
+    color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.contact-legal p {
+    color: #fefae0;
+    margin-bottom: 0.5rem;
+}
+
+/* Legal Footer */
+.legal-footer {
+    background-color: #283618;
+    color: #fefae0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.legal-footer p {
+    color: #fefae0;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Legal Pages */
+@media (max-width: 768px) {
+    .legal-document {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .data-categories,
+    .services-grid,
+    .warranties,
+    .security-measures {
+        grid-template-columns: 1fr;
+    }
+    
+    .legal-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .legal-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .legal-section h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-document {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .legal-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .legal-section h2 {
+        font-size: 1.4rem;
+    }
+}
