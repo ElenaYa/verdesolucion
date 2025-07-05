@@ -145,9 +145,9 @@ h1, h2, h3, h4, h5, h6 {
     animation: floating 4s ease-in-out infinite;
 } */
 
-.floating-slow {
+/* .floating-slow {
     animation: floatingSlow 5s ease-in-out infinite;
-}
+} */
 
 .floating-reverse {
     animation: floatingReverse 4.5s ease-in-out infinite;
@@ -1291,7 +1291,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .wind-image-main img {
     width: 100%;
-    height: 350px;
     object-fit: cover;
 }
 
