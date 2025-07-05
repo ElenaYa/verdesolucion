@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <div class="logo floating">
                 <h2>🌱 Verde Solución</h2>
             </div>
             <ul class="nav-menu">
@@ -21,21 +21,62 @@
                 <li><a href="testimonios.html" class="nav-link">Testimonios</a></li>
                 <li><a href="contactanos.html" class="nav-link">Contáctanos</a></li>
             </ul>
+            <div class="burger-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Energía Limpia para un México Sostenible</h1>
-            <p>Transformamos hogares y empresas con soluciones renovables que cuidan nuestro planeta y reducen tus costos energéticos.</p>
-            <div class="hero-buttons">
-                <a href="energia-solar.html" class="btn-primary">Descubre Energía Solar</a>
-                <a href="contactanos.html" class="btn-secondary">Solicita Cotización</a>
-            </div>
+    <section class="hero-redesign">
+        <div class="hero-background">
+            <div class="floating-element floating-1">🌿</div>
+            <div class="floating-element floating-2">💨</div>
+            <div class="floating-element floating-3">☀️</div>
         </div>
-        <div class="hero-image">
-            <img src="img/solar-home.jpg" alt="Casa con paneles solares en México">
+        <div class="hero-container">
+            <div class="hero-text-section">
+                <div class="hero-badge fade-in-up">🌟 Líderes en Energía Renovable</div>
+                <h1 class="hero-title fade-in-up delay-1">Energía Limpia para un <span class="text-highlight">México Sostenible</span></h1>
+                <p class="hero-description fade-in-up delay-2">Transformamos hogares y empresas con soluciones renovables que cuidan nuestro planeta y reducen tus costos energéticos hasta en un 90%.</p>
+                <div class="hero-stats fade-in-up delay-3">
+                    <div class="stat-mini">
+                        <strong>1,200+</strong>
+                        <span>Instalaciones</span>
+                    </div>
+                    <div class="stat-mini">
+                        <strong>95%</strong>
+                        <span>Satisfacción</span>
+                    </div>
+                    <div class="stat-mini">
+                        <strong>8 años</strong>
+                        <span>Experiencia</span>
+                    </div>
+                </div>
+                <div class="hero-buttons fade-in-up delay-4">
+                    <a href="energia-solar.html" class="btn-primary pulse">Descubre Energía Solar</a>
+                    <a href="contactanos.html" class="btn-secondary">Solicita Cotización Gratis</a>
+                </div>
+            </div>
+            <div class="hero-visual-section">
+                <div class="hero-image-main floating-slow">
+                    <img src="img/solar-home.jpg" alt="Casa con paneles solares en México">
+                    <div class="image-overlay">
+                        <div class="energy-indicator">
+                            <div class="energy-icon">⚡</div>
+                            <div class="energy-text">
+                                <strong>90% Ahorro</strong>
+                                <span>Energético</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-secondary floating-reverse">
+                    <img src="img/wind-energy.jpg" alt="Energía eólica en México">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -63,6 +104,119 @@
                     <div class="feature-icon">🌍</div>
                     <h3>Impacto Ambiental</h3>
                     <p>Reduce tu huella de carbono y contribuye a un México más verde y sustentable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wind Energy Section -->
+    <section class="wind-energy">
+        <div class="container">
+            <div class="wind-content">
+                <div class="wind-text-section">
+                    <div class="section-badge floating">💨 Energía Eólica</div>
+                    <h2 class="slide-in-left">El Poder del Viento Mexicano</h2>
+                    <p class="slide-in-left delay-1">México cuenta con uno de los mejores potenciales eólicos del mundo. Nuestras soluciones de energía eólica aprovechan los vientos constantes para generar electricidad limpia y económica.</p>
+                    
+                    <div class="wind-benefits slide-in-left delay-2">
+                        <div class="wind-benefit">
+                            <div class="benefit-icon floating">🌪️</div>
+                            <div class="benefit-text">
+                                <h4>Vientos Constantes</h4>
+                                <p>Aprovechamos los corredores eólicos naturales de México para máxima eficiencia.</p>
+                            </div>
+                        </div>
+                        <div class="wind-benefit">
+                            <div class="benefit-icon floating">🏭</div>
+                            <div class="benefit-text">
+                                <h4>Ideal para Empresas</h4>
+                                <p>Soluciones escalables para industrias con alto consumo energético.</p>
+                            </div>
+                        </div>
+                        <div class="wind-benefit">
+                            <div class="benefit-icon floating">🌱</div>
+                            <div class="benefit-text">
+                                <h4>Zero Emisiones</h4>
+                                <p>Tecnología 100% limpia que no produce contaminantes ni residuos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wind-stats slide-in-left delay-3">
+                        <div class="wind-stat">
+                            <strong>35%</strong>
+                            <span>Capacidad Instalada</span>
+                        </div>
+                        <div class="wind-stat">
+                            <strong>24/7</strong>
+                            <span>Generación Continua</span>
+                        </div>
+                        <div class="wind-stat">
+                            <strong>25 años</strong>
+                            <span>Vida Útil</span>
+                        </div>
+                    </div>
+
+                    <a href="contactanos.html" class="btn-wind pulse">Consulta Energía Eólica</a>
+                </div>
+                <div class="wind-visual-section">
+                    <div class="wind-image-main floating-slow">
+                        <img src="img/wind-turbines.jpg" alt="Parque eólico en México">
+                        <div class="wind-overlay">
+                            <div class="wind-indicator rotating">
+                                <div class="turbine-icon">🌀</div>
+                                <div class="generation-text">
+                                    <strong>Generando</strong>
+                                    <span>Energía Limpia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wind-image-secondary slide-in-right">
+                        <img src="img/wind-farm-landscape.jpg" alt="Paisaje con aerogeneradores">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hybrid Energy Solutions -->
+    <section class="hybrid-solutions">
+        <div class="container">
+            <div class="hybrid-header">
+                <h2 class="fade-in-up">Soluciones Híbridas: Lo Mejor de Ambos Mundos</h2>
+                <p class="fade-in-up delay-1">Combinamos energía solar y eólica para maximizar la generación y minimizar la dependencia de la red eléctrica</p>
+            </div>
+            <div class="hybrid-grid">
+                <div class="hybrid-card floating hover-lift">
+                    <div class="hybrid-icon">☀️💨</div>
+                    <h3>Sistema Híbrido Residencial</h3>
+                    <p>Paneles solares + mini aerogenerador para hogares con consumo alto</p>
+                    <ul>
+                        <li>Generación 24/7</li>
+                        <li>Backup automático</li>
+                        <li>95% independencia energética</li>
+                    </ul>
+                </div>
+                <div class="hybrid-card floating delay-1 hover-lift">
+                    <div class="hybrid-icon">🏭⚡</div>
+                    <h3>Sistema Industrial</h3>
+                    <p>Solución completa para empresas que buscan máxima eficiencia</p>
+                    <ul>
+                        <li>Reducción hasta 90% en costos</li>
+                        <li>Monitoreo inteligente</li>
+                        <li>ROI en 3-5 años</li>
+                    </ul>
+                </div>
+                <div class="hybrid-card floating delay-2 hover-lift">
+                    <div class="hybrid-icon">🌍🔋</div>
+                    <h3>Almacenamiento Inteligente</h3>
+                    <p>Baterías de última generación para almacenar energía renovable</p>
+                    <ul>
+                        <li>Respaldo de emergencia</li>
+                        <li>Gestión automática</li>
+                        <li>15+ años de vida útil</li>
+                    </ul>
                 </div>
             </div>
         </div>
