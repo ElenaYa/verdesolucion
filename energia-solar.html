@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energía Solar - Verde Solución</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🌱 Verde Solución</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="energia-solar.html" class="nav-link active">Energía Solar</a></li>
+                <li><a href="testimonios.html" class="nav-link">Testimonios</a></li>
+                <li><a href="contactanos.html" class="nav-link">Contáctanos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Energía Solar</h1>
+            <p>Descubre cómo la energía del sol puede transformar tu hogar o negocio</p>
+        </div>
+    </section>
+
+    <!-- Solar Benefits Section -->
+    <section class="solar-benefits">
+        <div class="container">
+            <h2>Beneficios de la Energía Solar</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="img/solar-panels.jpg" alt="Paneles solares de alta eficiencia">
+                    <h3>Tecnología de Vanguardia</h3>
+                    <p>Utilizamos paneles de última generación con eficiencia superior al 20% y garantía de 25 años.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="img/mexican-landscape.jpg" alt="Paisaje mexicano con energía limpia">
+                    <h3>Perfecta para México</h3>
+                    <p>México recibe más de 5 kWh/m² de radiación solar diaria, ideal para maximizar la generación.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="img/sustainable-home.jpg" alt="Hogar sustentable con paneles solares">
+                    <h3>Instalación Profesional</h3>
+                    <p>Nuestros ingenieros certificados garantizan una instalación segura y optimizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo Funciona?</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Evaluación Gratuita</h3>
+                    <p>Visitamos tu propiedad para analizar el consumo energético y condiciones del techo.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>Creamos un sistema solar optimizado para tus necesidades específicas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Instalación Rápida</h3>
+                    <p>Instalamos tu sistema en 1-3 días con mínima interrupción.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Conexión y Monitoreo</h3>
+                    <p>Conectamos tu sistema y te enseñamos a monitorear la producción de energía.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator -->
+    <section class="savings-calculator">
+        <div class="container">
+            <h2>Calcula tu Ahorro</h2>
+            <div class="calculator-content">
+                <div class="calculator-form">
+                    <h3>Estimador de Ahorro Solar</h3>
+                    <form id="savingsForm">
+                        <div class="form-group">
+                            <label for="monthlyBill">Recibo mensual promedio (MXN):</label>
+                            <input type="number" id="monthlyBill" placeholder="2,500" min="100" max="50000">
+                        </div>
+                        <div class="form-group">
+                            <label for="roofSize">Tamaño aproximado del techo (m²):</label>
+                            <input type="number" id="roofSize" placeholder="50" min="20" max="500">
+                        </div>
+                        <button type="button" onclick="calculateSavings()" class="btn-primary">Calcular Ahorro</button>
+                    </form>
+                    <div id="savingsResult" class="savings-result"></div>
+                </div>
+                <div class="calculator-image">
+                    <img src="img/green-technology.jpg" alt="Tecnología verde y sustentable">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌱 Verde Solución</h3>
+                    <p>Líderes en energía renovable en México. Construyendo un futuro sostenible para todos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. Vallarta 456, Guadalajara, Jalisco</p>
+                    <p>📞 +52 33 2345 6789</p>
+                    <p>✉️ info@verdesolucion.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="energia-solar.html">Paneles Solares</a></li>
+                        <li><a href="/">Consultoría Energética</a></li>
+                        <li><a href="/">Mantenimiento</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verde Solución. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
