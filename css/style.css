@@ -15,6 +15,10 @@ body {
 }
 
 /* Background Texture */
+body {
+    background: url('img/textura-papel.png') repeat;
+    background-size: cover;
+  }
 body::before {
     content: '';
     position: fixed;
