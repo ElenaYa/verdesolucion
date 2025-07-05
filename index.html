@@ -5,105 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verde Solución - Energía Renovable en México</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo floating">
-                <h2>🌱 Verde Solución</h2>
+    <nav class="navbar-organic">
+        <div class="nav-organic-container">
+            <div class="logo-organic">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5c-2 0-3.5 1.2-4.8 2.8C13.5 9.2 12 11.5 12 14c0 3.2 2.1 5.8 4.9 7.2-.3.8-.9 1.5-.9 2.8 0 2.1 1.4 3.8 3.2 4.9-.1.6-.2 1.2-.2 1.8 0 3.3 2.7 6 6 6s6-2.7 6-6c0-.6-.1-1.2-.2-1.8 1.8-1.1 3.2-2.8 3.2-4.9 0-1.3-.6-2-.9-2.8C35.9 19.8 38 17.2 38 14c0-2.5-1.5-4.8-3.2-6.2C33.5 6.2 32 5 30 5c-1.8 0-3.2.8-4.5 1.8C24.2 5.8 22.2 5 20 5z" fill="#a3b18a" stroke="#283618" stroke-width="1.5" opacity="0.9"/>
+                        <circle cx="16" cy="12" r="1.5" fill="#283618" opacity="0.7"/>
+                        <circle cx="24" cy="12" r="1.5" fill="#283618" opacity="0.7"/>
+                        <path d="M15 18c1.5 1.2 3.2 1.8 5 1.8s3.5-.6 5-1.8" stroke="#283618" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h2>Verde Solución</h2>
+                    <span class="logo-tagline">Energía Natural</span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link active">Inicio</a></li>
-                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
-                <li><a href="energia-solar.html" class="nav-link">Energía Solar</a></li>
-                <li><a href="testimonios.html" class="nav-link">Testimonios</a></li>
-                <li><a href="contactanos.html" class="nav-link">Contáctanos</a></li>
-            </ul>
-            <div class="burger-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <div class="nav-content-organic">
+                <ul class="nav-menu-organic">
+                    <li class="nav-item-organic">
+                        <a href="/" class="nav-link-organic active">
+                            <span class="nav-icon">🏠</span>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-organic">
+                        <a href="quienes-somos.html" class="nav-link-organic">
+                            <span class="nav-icon">🌱</span>
+                            <span>Quiénes Somos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-organic">
+                        <a href="energia-solar.html" class="nav-link-organic">
+                            <span class="nav-icon">☀️</span>
+                            <span>Energía Solar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-organic">
+                        <a href="testimonios.html" class="nav-link-organic">
+                            <span class="nav-icon">💬</span>
+                            <span>Testimonios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-organic">
+                        <a href="contactanos.html" class="nav-link-organic contact-highlight">
+                            <span class="nav-icon">📞</span>
+                            <span>Contáctanos</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="burger-menu-organic" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+        </div>
+        
+        <!-- Organic bottom divider -->
+        <div class="nav-divider">
+            <svg width="100%" height="20" viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,10 Q150,2 300,8 T600,12 Q900,15 1200,8 L1200,20 L0,20 Z" fill="#fefae0" opacity="0.8"/>
+                <path d="M0,8 Q200,15 400,6 T800,11 Q1000,4 1200,9 L1200,20 L0,20 Z" fill="#f7f3d0" opacity="0.6"/>
+            </svg>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-redesign">
-        <div class="hero-background">
-            <div class="floating-element floating-1">🌿</div>
-            <div class="floating-element floating-2">💨</div>
-            <div class="floating-element floating-3">☀️</div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-text-section">
-                <div class="hero-badge fade-in-up">🌟 Líderes en Energía Renovable</div>
-                <h1 class="hero-title fade-in-up delay-1">Energía Limpia para un <span class="text-highlight">México Sostenible</span></h1>
-                <p class="hero-description fade-in-up delay-2">Transformamos hogares y empresas con soluciones renovables que cuidan nuestro planeta y reducen tus costos energéticos hasta en un 90%.</p>
-                <div class="hero-stats fade-in-up delay-3">
-                    <div class="stat-mini">
-                        <strong>1,200+</strong>
-                        <span>Instalaciones</span>
-                    </div>
-                    <div class="stat-mini">
-                        <strong>95%</strong>
-                        <span>Satisfacción</span>
-                    </div>
-                    <div class="stat-mini">
-                        <strong>8 años</strong>
-                        <span>Experiencia</span>
-                    </div>
-                </div>
-                <div class="hero-buttons fade-in-up delay-4">
-                    <a href="energia-solar.html" class="btn-primary pulse">Descubre Energía Solar</a>
-                    <a href="contactanos.html" class="btn-secondary">Solicita Cotización Gratis</a>
-                </div>
+    <section class="hero-organic">
+        <div class="hero-background-texture"></div>
+        <div class="hero-floating-elements">
+            <div class="floating-leaf floating-leaf-1">
+                <svg width="30" height="35" viewBox="0 0 30 35" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 2c-3 1-6 4-8 8-2 4-2 8 0 12 1 2 3 4 5 5 1 0 2-1 3-2 1-1 2-3 3-5 1 2 2 4 3 5 1 1 2 2 3 2 2-1 4-3 5-5 2-4 2-8 0-12-2-4-5-7-8-8-2-1-4-1-6 0z" fill="#a3b18a" opacity="0.3" stroke="#283618" stroke-width="0.5"/>
+                </svg>
             </div>
-            <div class="hero-visual-section">
-                <div class="hero-image-main floating-slow">
-                    <img src="img/solar-home.jpg" alt="Casa con paneles solares en México">
-                    <div class="image-overlay">
-                        <div class="energy-indicator">
-                            <div class="energy-icon">⚡</div>
-                            <div class="energy-text">
-                                <strong>90% Ahorro</strong>
-                                <span>Energético</span>
+            <div class="floating-leaf floating-leaf-2">
+                <svg width="25" height="30" viewBox="0 0 25 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1c-2.5 0.8-5 3.2-6.5 6.5-1.5 3.3-1.5 6.5 0 9.8 0.8 1.6 2.4 3.2 4 4 0.8 0 1.6-0.8 2.4-1.6 0.8-0.8 1.6-2.4 2.4-4 0.8 1.6 1.6 3.2 2.4 4 0.8 0.8 1.6 1.6 2.4 1.6 1.6-0.8 3.2-2.4 4-4 1.5-3.3 1.5-6.5 0-9.8C21.5 4.2 19 1.8 16.5 1c-1.5-0.8-3-0.8-4.5 0z" fill="#7fb069" opacity="0.4" stroke="#283618" stroke-width="0.5"/>
+                </svg>
+            </div>
+            <div class="floating-leaf floating-leaf-3">
+                <svg width="20" height="25" viewBox="0 0 20 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 1c-2 0.6-4 2.4-5 4.8-1 2.4-1 4.8 0 7.2 0.6 1.2 1.8 2.4 3 3 0.6 0 1.2-0.6 1.8-1.2 0.6-0.6 1.2-1.8 1.8-3 0.6 1.2 1.2 2.4 1.8 3 0.6 0.6 1.2 1.2 1.8 1.2 1.2-0.6 2.4-1.8 3-3 1-2.4 1-4.8 0-7.2C16.2 3.4 14.4 1.6 12.4 1c-1.2-0.6-2.4-0.6-2.4 0z" fill="#6a994e" opacity="0.5" stroke="#283618" stroke-width="0.5"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-organic-layout">
+                <div class="hero-text-organic">
+                    <div class="hero-badge-organic">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="8" fill="none" stroke="#a3b18a" stroke-width="1.5" stroke-dasharray="2,2"/>
+                            <circle cx="10" cy="10" r="3" fill="#a3b18a"/>
+                        </svg>
+                        <span>Líderes en Energía Renovable</span>
+                    </div>
+                    
+                    <h1 class="hero-title-organic">
+                        <span class="title-part-1">Energía Limpia</span>
+                        <span class="title-connector">para un</span>
+                        <span class="title-highlight">México Sostenible</span>
+                        <div class="title-decoration">
+                            <svg width="120" height="8" viewBox="0 0 120 8" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2,4 Q30,1 60,5 T118,3" stroke="#a3b18a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </h1>
+                    
+                    <p class="hero-description-organic">Transformamos hogares y empresas con soluciones renovables que cuidan nuestro planeta y reducen tus costos energéticos hasta en un <strong>90%</strong>.</p>
+                    
+                    <div class="hero-stats-organic">
+                        <div class="stat-organic">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" fill="#a3b18a" stroke="#283618" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <strong>1,200+</strong>
+                            <span>Instalaciones</span>
+                        </div>
+                        <div class="stat-organic">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="#a3b18a" stroke-width="2"/>
+                                    <path d="M12 6v6l4 2" stroke="#283618" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <strong>95%</strong>
+                            <span>Satisfacción</span>
+                        </div>
+                        <div class="stat-organic">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="#a3b18a" stroke-width="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6" stroke="#283618" stroke-width="2"/>
+                                    <line x1="8" y1="2" x2="8" y2="6" stroke="#283618" stroke-width="2"/>
+                                    <line x1="3" y1="10" x2="21" y2="10" stroke="#a3b18a" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <strong>8 años</strong>
+                            <span>Experiencia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons-organic">
+                        <a href="energia-solar.html" class="btn-primary-organic">
+                            <span>Descubre Energía Solar</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8l6-6v4h8v4h-8v4z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="contactanos.html" class="btn-secondary-organic">
+                            <span>Solicita Cotización Gratis</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual-organic">
+                    <div class="hero-main-image">
+                        <img src="img/solar-home.jpg" alt="Casa con paneles solares en México">
+                        <div class="image-overlay-organic">
+                            <div class="energy-badge">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="10,1 13,7 20,7 15,11 17,18 10,14 3,18 5,11 0,7 7,7" fill="#ffd700"/>
+                                </svg>
+                                <div class="energy-text">
+                                    <strong>90% Ahorro</strong>
+                                    <span>Energético</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="hero-image-secondary floating-reverse">
-                    <img src="img/wind-energy.jpg" alt="Energía eólica en México">
+                    
+                    <div class="hero-floating-card">
+                        <img src="img/wind-energy.jpg" alt="Energía eólica">
+                        <div class="card-content">
+                            <h4>Energía Híbrida</h4>
+                            <p>Solar + Eólica</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
+    <section class="features-asymmetric">
+        <div class="features-background-texture"></div>
         <div class="container">
-            <h2>¿Por Qué Elegir Verde Solución?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌞</div>
-                    <h3>Energía Solar</h3>
-                    <p>Instalaciones de paneles solares de alta calidad que reducen hasta 90% tu factura eléctrica.</p>
+            <div class="section-header-organic">
+                <h2 class="section-title-organic">
+                    <span class="title-main">¿Por Qué Elegir</span>
+                    <span class="title-emphasis">Verde Solución?</span>
+                    <div class="title-underline">
+                        <svg width="180" height="12" viewBox="0 0 180 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5,6 Q45,2 90,7 T175,5" stroke="#a3b18a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+                            <path d="M10,9 Q50,5 95,10 T170,8" stroke="#7fb069" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </h2>
+                <p class="section-subtitle">Soluciones integrales que combinan tecnología avanzada con compromiso ambiental</p>
+            </div>
+            
+            <div class="features-organic-grid">
+                <!-- Feature 1 - Left aligned -->
+                <div class="feature-organic feature-left">
+                    <div class="feature-content">
+                        <div class="feature-icon-organic">
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="25" fill="#a3b18a" opacity="0.2"/>
+                                <circle cx="30" cy="15" r="8" fill="#ffd700" stroke="#e6b800" stroke-width="2"/>
+                                <path d="M30 7v-4M30 27v4M38 15h4M18 15h4M35.66 9.34l2.83-2.83M21.51 23.49l2.83-2.83M35.66 20.66l2.83 2.83M21.51 6.51l2.83 2.83" stroke="#e6b800" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="22" y="30" width="16" height="12" fill="#a3b18a" stroke="#283618" stroke-width="1.5" rx="2"/>
+                                <line x1="26" y1="34" x2="34" y2="34" stroke="#fefae0" stroke-width="1"/>
+                                <line x1="26" y1="37" x2="34" y2="37" stroke="#fefae0" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title-organic">Energía Solar Avanzada</h3>
+                        <p>Instalaciones de paneles solares de alta calidad con tecnología de vanguardia que reducen hasta <strong>90%</strong> tu factura eléctrica.</p>
+                        <div class="feature-decoration">
+                            <svg width="40" height="6" viewBox="0 0 40 6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2,3 Q10,1 20,4 T38,2" stroke="#a3b18a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Hogares Sostenibles</h3>
-                    <p>Convertimos tu hogar en un espacio eco-amigable con tecnología limpia y eficiente.</p>
+                
+                <!-- Feature 2 - Right aligned -->
+                <div class="feature-organic feature-right">
+                    <div class="feature-content">
+                        <div class="feature-icon-organic">
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="25" fill="#7fb069" opacity="0.2"/>
+                                <rect x="15" y="20" width="30" height="20" fill="#a3b18a" stroke="#283618" stroke-width="2" rx="3"/>
+                                <rect x="20" y="15" width="4" height="10" fill="#8b4513" stroke="#654321" stroke-width="1"/>
+                                <rect x="36" y="15" width="4" height="10" fill="#8b4513" stroke="#654321" stroke-width="1"/>
+                                <circle cx="25" cy="28" r="2" fill="#ffd700"/>
+                                <circle cx="35" cy="28" r="2" fill="#ffd700"/>
+                                <rect x="27" y="32" width="6" height="4" fill="#654321" rx="2"/>
+                                <path d="M18 45q6-3 12 0t12 0" stroke="#a3b18a" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title-organic">Hogares Sostenibles</h3>
+                        <p>Convertimos tu hogar en un espacio eco-amigable con tecnología limpia y eficiente que respeta el medio ambiente.</p>
+                        <div class="feature-decoration">
+                            <svg width="40" height="6" viewBox="0 0 40 6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2,3 Q10,1 20,4 T38,2" stroke="#7fb069" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Ahorro Garantizado</h3>
-                    <p>Inversión que se paga sola con el ahorro energético a mediano plazo.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Impacto Ambiental</h3>
-                    <p>Reduce tu huella de carbono y contribuye a un México más verde y sustentable.</p>
+                
+                <!-- Feature 3 - Center full width -->
+                <div class="feature-organic feature-full">
+                    <div class="feature-full-content">
+                        <div class="feature-text">
+                            <div class="feature-icon-organic">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#6a994e" opacity="0.2"/>
+                                    <circle cx="30" cy="30" r="15" fill="none" stroke="#a3b18a" stroke-width="3"/>
+                                    <text x="30" y="35" text-anchor="middle" font-family="Inter" font-size="12" font-weight="bold" fill="#283618">$</text>
+                                    <path d="M15 30 L20 25 L25 35 L35 20 L40 30 L45 25" stroke="#7fb069" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title-organic">Ahorro Garantizado</h3>
+                            <p><em>Inversión inteligente</em> que se paga sola con el ahorro energético a mediano plazo. <strong>ROI garantizado</strong> en 3-5 años.</p>
+                        </div>
+                        
+                        <div class="feature-text">
+                            <div class="feature-icon-organic">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#5a7c65" opacity="0.2"/>
+                                    <circle cx="30" cy="30" r="18" fill="none" stroke="#a3b18a" stroke-width="2" stroke-dasharray="4,2"/>
+                                    <path d="M15 25 Q30 15 45 25 Q30 35 15 25" fill="#7fb069" opacity="0.3"/>
+                                    <circle cx="22" cy="25" r="2" fill="#4a6741"/>
+                                    <circle cx="30" cy="20" r="2" fill="#4a6741"/>
+                                    <circle cx="38" cy="25" r="2" fill="#4a6741"/>
+                                    <circle cx="30" cy="35" r="3" fill="#6a994e"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title-organic">Impacto Ambiental Positivo</h3>
+                            <p>Reduce tu <strong>huella de carbono</strong> y contribuye a un México más verde y sustentable para las futuras generaciones.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
