@@ -1,3 +1,50 @@
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const burgerMenu = document.querySelector('.burger-menu');
+    
+    navMenu.classList.toggle('mobile-active');
+    burgerMenu.classList.toggle('active');
+}
+
+// Enhanced mobile navigation
+function setupMobileNav() {
+    const nav = document.querySelector('.navbar');
+    const navMenu = document.querySelector('.nav-menu');
+    const burgerMenu = document.querySelector('.burger-menu');
+    
+    // Show/hide burger menu based on screen size
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            burgerMenu.style.display = 'flex';
+            navMenu.classList.add('mobile-nav');
+        } else {
+            burgerMenu.style.display = 'none';
+            navMenu.classList.remove('mobile-nav', 'mobile-active');
+            burgerMenu.classList.remove('active');
+        }
+    }
+    
+    // Close mobile menu when clicking on a link
+    navMenu.addEventListener('click', (e) => {
+        if (e.target.classList.contains('nav-link')) {
+            navMenu.classList.remove('mobile-active');
+            burgerMenu.classList.remove('active');
+        }
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && navMenu.classList.contains('mobile-active')) {
+            navMenu.classList.remove('mobile-active');
+            burgerMenu.classList.remove('active');
+        }
+    });
+    
+    window.addEventListener('resize', checkScreenSize);
+    checkScreenSize();
+}
+
 // Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
@@ -59,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }, delay);
         });
     }
+    
+    // Setup mobile navigation
+    setupMobileNav();
 });
 
 // Savings Calculator
@@ -93,9 +143,9 @@ function calculateSavings() {
     resultDiv.innerHTML = `
         <h4>🌟 Tu Potencial de Ahorro</h4>
         <p><strong>Sistema estimado:</strong> ${systemSizeKW.toFixed(1)} kW</p>
-        <p><strong>Ahorro mensual:</strong> $${monthlySavings.toLocaleString()} MXN</p>
-        <p><strong>Ahorro anual:</strong> $${annualSavings.toLocaleString()} MXN</p>
-        <p><strong>Inversión estimada:</strong> $${estimatedInvestment.toLocaleString()} MXN</p>
+        <p><strong>Ahorro mensual:</strong> ${monthlySavings.toLocaleString()} MXN</p>
+        <p><strong>Ahorro anual:</strong> ${annualSavings.toLocaleString()} MXN</p>
+        <p><strong>Inversión estimada:</strong> ${estimatedInvestment.toLocaleString()} MXN</p>
         <p><strong>Recuperación:</strong> ${paybackYears} años</p>
         <br>
         <p><em>*Estimación basada en promedio de radiación solar en México. Solicita una evaluación gratuita para cálculos precisos.</em></p>
@@ -123,11 +173,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add animation on scroll (optional enhancement)
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.feature-card, .benefit-card, .testimonial-card, .step');
+// Enhanced animation on scroll
+function setupScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
     
     const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    animatedElements.forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
+    });
+}
+
+// Parallax effect for hero background elements
+function setupParallax() {
+    const floatingElements = document.querySelectorAll('.floating-element');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        floatingElements.forEach((element, index) => {
+            const speed = (index + 1) * 0.1;
+            element.style.transform = `translateY(${rate * speed}px)`;
+        });
+    });
+}
+
+// Initialize all enhancements when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    setupScrollAnimations();
+    setupParallax();
+    
+    // Add intersection observer for card hover effects
+    const cards = document.querySelectorAll('.feature-card, .benefit-card, .testimonial-card, .hybrid-card');
+    
+    const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
@@ -138,35 +228,30 @@ function animateOnScroll() {
         threshold: 0.1
     });
     
-    elements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        cardObserver.observe(card);
+    });
+});
+
+// Add dynamic energy indicator animation
+function animateEnergyIndicators() {
+    const energyIndicators = document.querySelectorAll('.energy-indicator, .wind-indicator');
+    
+    energyIndicators.forEach(indicator => {
+        const icon = indicator.querySelector('.energy-icon, .turbine-icon');
+        if (icon) {
+            setInterval(() => {
+                icon.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    icon.style.transform = 'scale(1)';
+                }, 200);
+            }, 2000);
+        }
     });
 }
 
-// Initialize animations when DOM is ready
-document.addEventListener('DOMContentLoaded', animateOnScroll);
-
-// Mobile menu toggle (if needed for mobile responsive design)
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('mobile-active');
-}
-
-// Add mobile menu styles when nav becomes mobile
-function checkMobileNav() {
-    const nav = document.querySelector('.navbar');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (window.innerWidth <= 768) {
-        nav.classList.add('mobile-nav');
-    } else {
-        nav.classList.remove('mobile-nav');
-        navMenu.classList.remove('mobile-active');
-    }
-}
-
-window.addEventListener('resize', checkMobileNav);
-document.addEventListener('DOMContentLoaded', checkMobileNav);
+// Initialize energy animations
+document.addEventListener('DOMContentLoaded', animateEnergyIndicators);
