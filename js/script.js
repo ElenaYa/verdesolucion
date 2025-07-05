@@ -1,7 +1,7 @@
 // Mobile menu toggle
 function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('.nav-menu-organic');
+    const burgerMenu = document.querySelector('.burger-menu-organic');
     
     navMenu.classList.toggle('mobile-active');
     burgerMenu.classList.toggle('active');
@@ -9,9 +9,11 @@ function toggleMobileMenu() {
 
 // Enhanced mobile navigation
 function setupMobileNav() {
-    const nav = document.querySelector('.navbar');
-    const navMenu = document.querySelector('.nav-menu');
-    const burgerMenu = document.querySelector('.burger-menu');
+    const nav = document.querySelector('.navbar-organic');
+    const navMenu = document.querySelector('.nav-menu-organic');
+    const burgerMenu = document.querySelector('.burger-menu-organic');
+    
+    if (!navMenu || !burgerMenu) return;
     
     // Show/hide burger menu based on screen size
     function checkScreenSize() {
@@ -27,7 +29,7 @@ function setupMobileNav() {
     
     // Close mobile menu when clicking on a link
     navMenu.addEventListener('click', (e) => {
-        if (e.target.classList.contains('nav-link')) {
+        if (e.target.classList.contains('nav-link-organic')) {
             navMenu.classList.remove('mobile-active');
             burgerMenu.classList.remove('active');
         }
