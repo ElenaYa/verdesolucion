@@ -641,7 +641,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(40, 54, 24, 0.2);
-    animation: floatingSlow 6s ease-in-out infinite;
+   
 }
 
 .hero-main-image img {
@@ -2891,4 +2891,23 @@ h1, h2, h3, h4, h5, h6 {
     .leaf-right-1, .leaf-right-2, .leaf-right-3 {
         right: 2%;
     }
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #606C38;
+    box-shadow: 0 0 0 2px rgba(96, 108, 56, 0.2);
+    outline: none;
 }

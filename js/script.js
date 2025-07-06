@@ -58,29 +58,42 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const formData = new FormData(contactForm);
             const firstName = formData.get('firstName');
-            const lastName = formData.get('lastName');
             const email = formData.get('email');
-            const phone = formData.get('phone');
+            const city = formData.get('city');
+            const propertyType = formData.get('propertyType');
+            const message = formData.get('message');
             
-            // Basic validation
-            if (!firstName || !lastName || !email || !phone) {
-                alert('Por favor, completa todos los campos obligatorios.');
+            // Basic validation for required fields
+            if (!firstName || !email || !message) {
+                // Check each field individually and add visual feedback
+                if (!firstName) {
+                    const firstNameInput = document.getElementById('firstName');
+                    firstNameInput.classList.add('error');
+                }
+                if (!email) {
+                    const emailInput = document.getElementById('email');
+                    emailInput.classList.add('error');
+                }
+                if (!message) {
+                    const messageInput = document.getElementById('message');
+                    messageInput.classList.add('error');
+                }
                 return;
             }
             
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
+                const emailInput = document.getElementById('email');
+                emailInput.classList.add('error');
                 alert('Por favor, ingresa un email válido.');
                 return;
             }
             
-            // Phone validation (basic Mexican phone format)
-            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
-            if (!phoneRegex.test(phone)) {
-                alert('Por favor, ingresa un teléfono válido.');
-                return;
-            }
+            // Remove any error classes
+            document.getElementById('firstName').classList.remove('error');
+            document.getElementById('email').classList.remove('error');
+            document.getElementById('message').classList.remove('error');
             
             // Disable submit button and show loading
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -102,10 +115,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 
-                // Optional: redirect to thank you page or home
-                // window.location.href = '/';
-                
             }, delay);
+        });
+
+        // Add input event listeners to remove error class when user types
+        ['firstName', 'email', 'message'].forEach(fieldId => {
+            const input = document.getElementById(fieldId);
+            if (input) {
+                input.addEventListener('input', function() {
+                    this.classList.remove('error');
+                });
+            }
         });
     }
     
