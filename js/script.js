@@ -1,4 +1,3 @@
-// Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu-organic');
     const burgerMenu = document.querySelector('.burger-menu-organic');
@@ -7,7 +6,6 @@ function toggleMobileMenu() {
     burgerMenu.classList.toggle('active');
 }
 
-// Enhanced mobile navigation
 function setupMobileNav() {
     const nav = document.querySelector('.navbar-organic');
     const navMenu = document.querySelector('.nav-menu-organic');
@@ -15,7 +13,6 @@ function setupMobileNav() {
     
     if (!navMenu || !burgerMenu) return;
     
-    // Show/hide burger menu based on screen size
     function checkScreenSize() {
         if (window.innerWidth <= 768) {
             burgerMenu.style.display = 'flex';
@@ -27,7 +24,6 @@ function setupMobileNav() {
         }
     }
     
-    // Close mobile menu when clicking on a link
     navMenu.addEventListener('click', (e) => {
         if (e.target.classList.contains('nav-link-organic')) {
             navMenu.classList.remove('mobile-active');
@@ -35,7 +31,6 @@ function setupMobileNav() {
         }
     });
     
-    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && navMenu.classList.contains('mobile-active')) {
             navMenu.classList.remove('mobile-active');
@@ -47,7 +42,6 @@ function setupMobileNav() {
     checkScreenSize();
 }
 
-// Modal Functions
 function showModal() {
     const modal = document.getElementById('successModal');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -62,7 +56,6 @@ function closeModal() {
     modal.classList.remove('show');
 }
 
-// Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
@@ -70,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = new FormData(contactForm);
             const firstName = formData.get('firstName');
             const email = formData.get('email');
@@ -78,9 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const propertyType = formData.get('propertyType');
             const message = formData.get('message');
             
-            // Basic validation for required fields
             if (!firstName || !email || !message) {
-                // Check each field individually and add visual feedback
                 if (!firstName) {
                     const firstNameInput = document.getElementById('firstName');
                     firstNameInput.classList.add('error');
@@ -96,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 const emailInput = document.getElementById('email');
@@ -105,35 +94,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Remove any error classes
             document.getElementById('firstName').classList.remove('error');
             document.getElementById('email').classList.remove('error');
             document.getElementById('message').classList.remove('error');
             
-            // Disable submit button and show loading
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
             
-            // Simulate sending (2-2.5 second delay)
-            const delay = Math.random() * 500 + 2000; // 2-2.5 seconds
+            const delay = Math.random() * 500 + 2000;
             
             setTimeout(function() {
-                // Show success modal
                 showModal();
                 
-                // Reset form
                 contactForm.reset();
                 
-                // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 
             }, delay);
         });
 
-        // Add input event listeners to remove error class when user types
         ['firstName', 'email', 'message'].forEach(fieldId => {
             const input = document.getElementById(fieldId);
             if (input) {
@@ -143,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Close modal when clicking outside
         document.addEventListener('click', function(e) {
             const modal = document.getElementById('successModal');
             if (e.target === modal) {
@@ -151,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Close modal on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
@@ -159,11 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Setup mobile navigation
     setupMobileNav();
 });
 
-// Savings Calculator
 function calculateSavings() {
     const monthlyBill = document.getElementById('monthlyBill').value;
     const roofSize = document.getElementById('roofSize').value;
@@ -174,24 +152,18 @@ function calculateSavings() {
         return;
     }
     
-    // Simple calculation logic
     const monthlyBillNum = parseInt(monthlyBill);
     const roofSizeNum = parseInt(roofSize);
     
-    // Calculate potential system size (rough estimate)
     const systemSizeKW = Math.min(roofSizeNum / 8, monthlyBillNum / 200);
     
-    // Calculate savings (assuming 80% reduction)
     const monthlySavings = monthlyBillNum * 0.8;
     const annualSavings = monthlySavings * 12;
     
-    // Calculate estimated investment
-    const estimatedInvestment = systemSizeKW * 25000; // $25,000 MXN per kW
+    const estimatedInvestment = systemSizeKW * 25000; 
     
-    // Calculate payback period
     const paybackYears = (estimatedInvestment / annualSavings).toFixed(1);
     
-    // Display results
     resultDiv.innerHTML = `
         <h4>🌟 Tu Potencial de Ahorro</h4>
         <p><strong>Sistema estimado:</strong> ${systemSizeKW.toFixed(1)} kW</p>
@@ -205,7 +177,6 @@ function calculateSavings() {
     resultDiv.style.display = 'block';
 }
 
-// Smooth scrolling for internal links
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -225,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Enhanced animation on scroll
 function setupScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
     
@@ -246,7 +216,6 @@ function setupScrollAnimations() {
     });
 }
 
-// Parallax effect for hero background elements
 function setupParallax() {
     const floatingElements = document.querySelectorAll('.floating-element');
     
@@ -261,12 +230,10 @@ function setupParallax() {
     });
 }
 
-// Initialize all enhancements when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     setupScrollAnimations();
     setupParallax();
     
-    // Add intersection observer for card hover effects
     const cards = document.querySelectorAll('.feature-card, .benefit-card, .testimonial-card, .hybrid-card');
     
     const cardObserver = new IntersectionObserver((entries) => {
@@ -288,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add dynamic energy indicator animation
 function animateEnergyIndicators() {
     const energyIndicators = document.querySelectorAll('.energy-indicator, .wind-indicator');
     
@@ -305,5 +271,4 @@ function animateEnergyIndicators() {
     });
 }
 
-// Initialize energy animations
 document.addEventListener('DOMContentLoaded', animateEnergyIndicators);

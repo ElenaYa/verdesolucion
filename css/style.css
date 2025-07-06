@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
     position: relative;
 }
 
-/* Background Texture */
 
 body::before {
     content: '';
@@ -34,7 +32,6 @@ body::before {
     z-index: -1;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', Georgia, serif;
     font-weight: 600;
@@ -46,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -125,7 +121,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Animation Classes */
 .fade-in-up {
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
@@ -140,14 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     animation: slideInRight 0.8s ease forwards;
 }
-/* 
-.floating {
-    animation: floating 4s ease-in-out infinite;
-} */
 
-/* .floating-slow {
-    animation: floatingSlow 5s ease-in-out infinite;
-} */
 
 .floating-reverse {
     animation: floatingReverse 4.5s ease-in-out infinite;
@@ -175,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 30px rgba(40, 54, 24, 0.2);
 }
 
-/* Organic Navigation */
 .navbar-organic {
     background: linear-gradient(135deg, rgba(163, 177, 138, 0.95) 0%, rgba(143, 168, 118, 0.95) 50%, rgba(127, 176, 105, 0.95) 100%);
     padding: 1.5rem 0 0;
@@ -302,7 +289,6 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-/* Burger Menu Organic */
 .burger-menu-organic {
     display: none;
     flex-direction: column;
@@ -396,7 +382,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Organic Hero Section */
 .hero-organic {
     position: relative;
     min-height: 90vh;
@@ -717,7 +702,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
 }
 
-/* Features Asymmetric Section */
 .features-asymmetric {
     position: relative;
     padding: 5rem 0;
@@ -791,7 +775,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-/* Feature Left */
 .feature-left {
     margin-left: 0;
     margin-right: 20%;
@@ -806,7 +789,6 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
 }
 
-/* Feature Right */
 .feature-right {
     margin-left: 20%;
     margin-right: 0;
@@ -821,7 +803,6 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
 }
 
-/* Feature Full Width */
 .feature-full {
     margin: 2rem 0;
 }
@@ -864,7 +845,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Page Header Organic */
 .page-header {
     background: linear-gradient(135deg, 
         rgba(163, 177, 138, 0.9) 0%, 
@@ -910,7 +890,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-/* Organic Button Styles Enhancement */
 .btn-primary,
 .btn-secondary,
 .btn-wind,
@@ -996,7 +975,6 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
-/* Wind Energy Section Enhanced */
 .wind-energy {
     padding: 5rem 0;
     background: linear-gradient(135deg, 
@@ -1151,7 +1129,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #606c38;
 }
 
-/* Hybrid Solutions Enhanced */
 .hybrid-solutions {
     padding: 5rem 0;
     background: linear-gradient(135deg, 
@@ -1283,7 +1260,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 2px 4px rgba(127, 176, 105, 0.3);
 }
 
-/* Stats Section Enhanced */
 .stats {
     padding: 4rem 0;
     background: linear-gradient(135deg, 
@@ -1411,7 +1387,6 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
-/* Hybrid Solutions Section */
 .hybrid-solutions {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fefae0 0%, #a3b18a 100%);
@@ -1551,7 +1526,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #606c38;
 }
 
-/* Stats Section */
 .stats {
     padding: 3rem 0;
     background-color: #a3b18a;
@@ -1579,7 +1553,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9;
 }
 
-/* Page Header */
 .page-header {
     background-color: #a3b18a;
     color: #fefae0;
@@ -1597,7 +1570,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9;
 }
 
-/* About Content */
 .about-content {
     padding: 4rem 0;
 }
@@ -1624,7 +1596,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-image img {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 8px 24px rgba(40, 54, 24, 0.15);
@@ -1691,7 +1663,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #606c38;
 }
 
-/* Solar Benefits Section */
 .solar-benefits {
     padding: 4rem 0;
 }
@@ -1723,7 +1694,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .benefit-card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -1739,7 +1710,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 1rem 1.5rem;
 }
 
-/* How It Works Section */
 .how-it-works {
     padding: 4rem 0;
     background-color: #f7f3d0;
@@ -1791,7 +1761,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #606c38;
 }
 
-/* Savings Calculator */
 .savings-calculator {
     padding: 4rem 0;
 }
@@ -1869,7 +1838,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 24px rgba(40, 54, 24, 0.15);
 }
 
-/* Testimonials */
 .testimonials {
     padding: 4rem 0;
 }
@@ -1913,7 +1881,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffc107;
 }
 
-/* Success Stories */
 .success-stories {
     padding: 4rem 0;
     background-color: #f7f3d0;
@@ -1941,7 +1908,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .success-story img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -1970,7 +1937,6 @@ h1, h2, h3, h4, h5, h6 {
     border-left: 3px solid #a3b18a;
 }
 
-/* Contact Section */
 .contact-section {
     padding: 4rem 0;
 }
@@ -2021,7 +1987,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-/* Map Section */
 .map-section {
     padding: 3rem 0;
     background-color: #f7f3d0;
@@ -2050,7 +2015,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
-/* Footer */
 .footer {
     background-color: #283618;
     color: #fefae0;
@@ -2102,9 +2066,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    /* Organic Navigation Mobile */
     .burger-menu-organic {
         display: flex !important;
     }
@@ -2159,7 +2121,6 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: none;
     }
     
-    /* Hero Organic Mobile */
     .hero-organic {
         min-height: 80vh;
         padding: 2rem 0;
@@ -2198,11 +2159,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-floating-card {
-        position: relative;
-        top: 20px;
+    
         right: 0;
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         margin: 0 auto;
     }
     
@@ -2210,7 +2170,6 @@ h1, h2, h3, h4, h5, h6 {
         height: 300px;
     }
     
-    /* Features Asymmetric Mobile */
     .section-title-organic {
         font-size: 2.2rem;
     }
@@ -2245,7 +2204,6 @@ h1, h2, h3, h4, h5, h6 {
         transform: scale(0.7);
     }
     
-    /* Other sections */
     .about-section,
     .calculator-content,
     .contact-content {
@@ -2271,7 +2229,6 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Wind Energy Mobile */
     .wind-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2292,7 +2249,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 1rem;
     }
     
-    /* Hybrid Solutions Mobile */
     .hybrid-grid {
         grid-template-columns: 1fr;
     }
@@ -2365,7 +2321,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Enhanced Mobile Navigation */
 @media (max-width: 768px) {
     .navbar-organic {
         position: relative;
@@ -2387,7 +2342,6 @@ h1, h2, h3, h4, h5, h6 {
         border-top: none;
     }
 }
-/* Legal Pages Styling */
 .legal-content {
     padding: 4rem 0;
     background-color: #fefae0;
@@ -2455,7 +2409,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Company Info Box */
 .company-info {
     background-color: #f7f3d0;
     padding: 1.5rem;
@@ -2468,7 +2421,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Legal Subsections */
 .legal-subsection {
     background-color: #fefae0;
     padding: 1.5rem;
@@ -2482,7 +2434,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-/* Data Categories Grid */
 .data-categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2507,7 +2458,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 1rem;
 }
 
-/* Transfer Note */
 .transfer-note {
     background-color: #a3b18a;
     color: #fefae0;
@@ -2517,7 +2467,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
-/* ARCO Process */
 .arco-process {
     background-color: #fefae0;
     padding: 1.5rem;
@@ -2535,7 +2484,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 1.5rem;
 }
 
-/* Revocation Note */
 .revocation-note {
     background-color: #f7f3d0;
     padding: 1rem;
@@ -2544,7 +2492,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0;
 }
 
-/* Security Measures */
 .security-measures {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2564,7 +2511,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
-/* Contact Privacy */
 .contact-privacy {
     background-color: #a3b18a;
     color: #fefae0;
@@ -2578,7 +2524,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Services Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2599,7 +2544,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 }
 
-/* Process Steps */
 .process-steps {
     margin: 1.5rem 0;
 }
@@ -2617,7 +2561,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.8rem;
 }
 
-/* Payment Info */
 .payment-info h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2625,7 +2568,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Delivery Terms */
 .delivery-terms h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2633,7 +2575,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Warranties */
 .warranties {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2667,7 +2608,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-/* Client Obligations */
 .client-obligations h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2675,7 +2615,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Liability Limits */
 .liability-limits h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2683,7 +2622,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Cancellation Policy */
 .cancellation-policy h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2691,7 +2629,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Website Terms */
 .website-terms h3 {
     color: #283618;
     border-bottom: 1px solid #a3b18a;
@@ -2699,7 +2636,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Jurisdiction */
 .jurisdiction {
     background-color: #f7f3d0;
     padding: 1.5rem;
@@ -2713,7 +2649,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
-/* Contact Legal */
 .contact-legal {
     background-color: #a3b18a;
     color: #fefae0;
@@ -2727,7 +2662,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Legal Footer */
 .legal-footer {
     background-color: #283618;
     color: #fefae0;
@@ -2785,7 +2719,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Decorative Floating Leaves */
 .decorative-leaves {
     position: fixed;
     width: 100%;
@@ -2916,7 +2849,6 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -2996,10 +2928,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Contact Page Styles */
-/* Previous contact styles */
 
-/* Additional Contact Section */
 .additional-contact-section {
     padding: 4rem 0;
     background-color: #f9f9f9;
@@ -3011,7 +2940,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 3rem;
 }
 
-/* FAQ Styles */
 .faq-item {
     background: white;
     padding: 1.5rem;
@@ -3039,7 +2967,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -3052,7 +2979,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Environmental Impact Section */
 .environmental-impact {
     position: relative;
     padding: 6rem 0;
@@ -3130,7 +3056,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
