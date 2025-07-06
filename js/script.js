@@ -47,6 +47,21 @@ function setupMobileNav() {
     checkScreenSize();
 }
 
+// Modal Functions
+function showModal() {
+    const modal = document.getElementById('successModal');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    requestAnimationFrame(() => {
+        modal.classList.add('show');
+    });
+}
+
+function closeModal() {
+    const modal = document.getElementById('successModal');
+    document.body.style.overflow = ''; // Restore scrolling
+    modal.classList.remove('show');
+}
+
 // Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
@@ -105,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const delay = Math.random() * 500 + 2000; // 2-2.5 seconds
             
             setTimeout(function() {
-                // Show success message
-                alert('Gracias por tu mensaje. Te contactaremos pronto.');
+                // Show success modal
+                showModal();
                 
                 // Reset form
                 contactForm.reset();
@@ -125,6 +140,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.addEventListener('input', function() {
                     this.classList.remove('error');
                 });
+            }
+        });
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('successModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
             }
         });
     }
