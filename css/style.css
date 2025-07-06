@@ -3003,7 +3003,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
@@ -3032,69 +3032,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-/* Contact Methods Styles */
-.contact-method-item {
-    display: flex;
-    align-items: flex-start;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.method-icon {
-    font-size: 2rem;
-    margin-right: 1rem;
-    min-width: 40px;
-}
 
-.method-content {
-    flex: 1;
-}
-
-.method-content h4 {
-    color: #2c5282;
-    margin-bottom: 0.5rem;
-}
-
-.method-content p {
-    color: #4a5568;
-    margin-bottom: 1rem;
-}
-
-.btn-whatsapp,
-.btn-email,
-.btn-phone {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn-whatsapp {
-    background-color: #25D366;
-    color: white;
-}
-
-.btn-email {
-    background-color: #4299e1;
-    color: white;
-}
-
-.btn-phone {
-    background-color: #48bb78;
-    color: white;
-}
-
-.btn-whatsapp:hover,
-.btn-email:hover,
-.btn-phone:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -3102,14 +3041,6 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .contact-method-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .method-icon {
-        margin: 0 0 1rem 0;
-    }
 
     .faq-item,
     .contact-method-item {
